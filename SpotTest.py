@@ -27,12 +27,12 @@ transform = transforms.Compose([transforms.Resize(103),
     model = torch.load('SpotCNN.pt')'''
 
 # test the model
-files = listdir("C:/Users/Conrad/Documents/OwnDataSpots/test/")
+files = listdir("directory/with/files/of/images/for/testing/")
 for i in range(len(files)):
     #einzelnes bild; kein batch
     f = random.choice(files)
     files.remove(f)
-    img = Image.open("C:/Users/Conrad/Documents/OwnDataSpots/test/" + f)
+    img = Image.open("directory/with/files/of/images/for/testing/" + f)
     img_eval_tensor = transform(img)
     img_eval_tensor.unsqueeze_(0)
     # use the filename to set the correct label
