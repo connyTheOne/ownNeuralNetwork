@@ -16,7 +16,7 @@ if __name__ == "__main__":
     red = Thread(target=norm_colors, args=(0,))
     red.start()'''
 
-files = listdir("F:/Dokumente/Arbeit/fehlerhafteSpots/AnaG_train/CO-NC-R3/")
+files = listdir("directory/with/files/of/images/")
 cmplte_start = time.time()
 for i in range(100):
     f = files[i]
@@ -26,7 +26,7 @@ for i in range(100):
     if not f.endswith('.db'):
         # load image for calculating the normalization for each image and add later as tensor in train_list
         
-        img = Image.open(r"F:/Dokumente/Arbeit/fehlerhafteSpots/AnaG_train/CO-NC-R3/" + f) 
+        img = Image.open(r"irectory/with/files/of/images/" + f) 
         imglist = img.getdata()
 
         '''#split-method --> seems the slowest
