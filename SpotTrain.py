@@ -26,14 +26,14 @@ transform = transforms.Compose([transforms.Resize(103),
 train_data_list = []
 target_list = []
 train_data = []
-files = listdir("C:/Users/Conrad/Documents/OwnDataSpots/train/NC_CO_R3/")
+files = listdir("directory/with/files/of/images/for/training/")
 for i in range(len(files)):
     
     f = random.choice(files)
     files.remove(f)
     
     # load image as Tensor
-    img = Image.open("C:/Users/Conrad/Documents/OwnDataSpots/train/NC_CO_R3/" + f)
+    img = Image.open("directory/with/files/of/images/for/training/" + f)
     
     # rotate image for more train data by 90°
     for i in range(0, 358, 90):
